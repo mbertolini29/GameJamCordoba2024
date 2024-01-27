@@ -14,8 +14,8 @@ public class GrandmotherProjectile : MonoBehaviour
     public bool canMove = false;
     public bool seMovio = false;
 
+    //fisica
     [SerializeField] private float forceMax = 350;
-
     public Slider sliderForce;
      
     //rigidbody

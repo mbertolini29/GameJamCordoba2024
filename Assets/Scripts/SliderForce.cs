@@ -38,6 +38,21 @@ public class SliderForce : MonoBehaviour
         Debug.Log($"valor en 1 {power.Evaluate(1)}");
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire1")) //(Input.GetMouseButtonDown(0))
+        {
+            var forceAtClick = power.Evaluate(slider.value);// * POWER_MULTIPLIER;
+
+            Debug.Log($"hice click en el valor {forceAtClick}");
+
+            grandmother.MovePlayer(forceAtClick);
+
+            //estadoActual = estadoBarra.quieto;
+        }
+    }
+
+
     private void FixedUpdate()   
     {
         //
@@ -64,17 +79,6 @@ public class SliderForce : MonoBehaviour
             {
                 estadoActual = estadoBarra.llenando;
             }
-        }
-
-        if (Input.GetButtonDown("Fire1")) //(Input.GetMouseButtonDown(0))
-        {
-            var forceAtClick = power.Evaluate(slider.value);// * POWER_MULTIPLIER;
-
-            Debug.Log($"hice click en el valor {forceAtClick}");
-
-            grandmother.MovePlayer(forceAtClick);
-
-            //estadoActual = estadoBarra.quieto;
         }
     }
 
