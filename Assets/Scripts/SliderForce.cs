@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SliderForce : MonoBehaviour
 {
-    enum estadoBarra
+    public enum estadoBarra
     {
         quieto,
         llenando,
@@ -14,7 +14,7 @@ public class SliderForce : MonoBehaviour
 
     //private int POWER_MULTIPLIER = 100;
 
-    estadoBarra estadoActual = estadoBarra.vaciandose;
+    public estadoBarra estadoActual = estadoBarra.vaciandose;
 
     [SerializeField] Slider slider;
     [SerializeField] GrandmotherProjectile grandmother;
@@ -48,7 +48,7 @@ public class SliderForce : MonoBehaviour
 
             grandmother.MovePlayer(forceAtClick);
 
-            //estadoActual = estadoBarra.quieto;
+            estadoActual = estadoBarra.quieto;
         }
     }
 
