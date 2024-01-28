@@ -72,12 +72,10 @@ public class GrandmotherProjectile : MonoBehaviour
             spriteRendererPlayer.flipX = rb.velocity.normalized.x < 0f;
             spriteRendererRueda.flipX = rb.velocity.normalized.x < 0f;
         }
-
     }
 
     public void MovePlayer(float forceAtClick)
     {
-
         //audioSourcePrevio.Stop();
 
         //la fuerza sale desde una barra.

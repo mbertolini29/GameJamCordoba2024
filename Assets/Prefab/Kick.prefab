@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7716288551755479996}
   - component: {fileID: 3530387378569646618}
   - component: {fileID: 184035989938742927}
+  - component: {fileID: 3275830709422843392}
   m_Layer: 0
   m_Name: Kick
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5263945396712104110
 SpriteRenderer:
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1045670157
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0141a8b0a78870140ab1d8b9befb9228, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -180,3 +181,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3275830709422843392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4174427508171277236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf60a1fbace62b4ba2a4cb39da2f481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonidoPatada: {fileID: 8300000, guid: 14b59b5bde36b744aa41e22da0fcf5b4, type: 3}
+  audioSourceSonidos: {fileID: 0}
