@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Grandmother"))
         {
             //como llamo a la variable de la abuela??
-            collision.gameObject.GetComponent<GrandmotherProjectile>().canMove = true;
+            //collision.gameObject.GetComponent<GrandmotherProjectile>().canMove = true;
             
             //HitPlayer();
         }

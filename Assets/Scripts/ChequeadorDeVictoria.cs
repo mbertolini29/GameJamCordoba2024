@@ -10,12 +10,18 @@ public class ChequeadorDeVictoria : MonoBehaviour
 
     public bool enAsilo = false;
 
+    public bool yaParo = false;
+
+    public GameObject pantallaAmbulancia;
+    public GameObject pantallaVoloAbuela;
+
     private void Update()
     {
         //si se lanzo. y no llego a llego
 
-        if (abuela.seMovio && rb.velocity.magnitude < Mathf.Epsilon)
+        if (abuela.seMovio && rb.velocity.magnitude < Mathf.Epsilon && yaParo == false)
         {
+            yaParo = true;
             Debug.Log("se paro");
             if (enAsilo)
             {
@@ -49,21 +55,53 @@ public class ChequeadorDeVictoria : MonoBehaviour
         }
     }
 
-    IEnumerator WaitTime()
+    public void Ganaste()
     {
-        yield return new WaitForSeconds(2f);
+        //se active pantalla. set active
+        pantallaVoloAbuela.SetActive(true);
+
+        StartCoroutine(WaitTimeAbuela());
+
+    }
+
+    IEnumerator WaitTimeAbuela()
+    {
+        yield return new WaitForSeconds(4f);
+
+        NextScene();
     }
 
     public void NextScene()
     {
-        //StartCoroutine(WaitTime());
-
         //cargar la escena de la ambulancia 
         //SceneManager.LoadScene("Ambulancia");
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+
+
+    public void Perdiste()
+    {
+        //hacemos aparece la pantalla de la ambulancia.
+        //SceneManager.LoadScene("Ambulancia");
+
+        //se active pantalla. set active
+        pantallaAmbulancia.SetActive(true);
+
+        StartCoroutine(WaitTime());
+
+    }
+
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(4f);
+
+        Reiniciar();
+    }
     public void Reiniciar()
     {
         //cargar la escena de la ambulancia 
@@ -71,16 +109,5 @@ public class ChequeadorDeVictoria : MonoBehaviour
 
         //reinicia el juego.
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void Ganaste()
-    {
-
-        NextScene();
-    }
-
-    public void Perdiste()
-    {
-        Reiniciar();
     }
 }

@@ -12,7 +12,7 @@ public class GrandmotherProjectile : MonoBehaviour
     public float speed;
 
     //move
-    public bool canMove = false;
+    //public bool seYaSeMovio = false;
     public bool seMovio = false;
 
     //fisica
@@ -41,8 +41,11 @@ public class GrandmotherProjectile : MonoBehaviour
     public AudioClip sonidoGanador;
 
     public AudioSource audioSourcePrevio;
+    public AudioSource audioSourceIntroPatada;
     public AudioSource audioSourcePos;
     public AudioSource audioSourceSonidos;
+
+    //
 
     private void Start()
     {
@@ -91,8 +94,9 @@ public class GrandmotherProjectile : MonoBehaviour
         rb.AddForce(finalForce, ForceMode2D.Impulse);
 
         //
-        seMovio = true;
+        //seMovio = true;
 
+        
         //cambio de musica.
         //paras uno, y activas la otra.
 

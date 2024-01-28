@@ -12,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ambulancia
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3249297139
+    locked: 0
+  - name: Ambulancia
+    uniqueID: 1885182209
     locked: 0

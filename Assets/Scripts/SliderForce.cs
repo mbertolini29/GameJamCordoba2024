@@ -31,20 +31,26 @@ public class SliderForce : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log($"valor en 0 {power.Evaluate(0)}");
-        Debug.Log($"valor en 0,1 {power.Evaluate(0.1f)}");
-        Debug.Log($"valor en 0.5 {power.Evaluate(0.5f)}");
-        Debug.Log($"valor en 0.9 {power.Evaluate(0.9f)}");
-        Debug.Log($"valor en 1 {power.Evaluate(1)}");
+        //Debug.Log($"valor en 0 {power.Evaluate(0)}");
+        //Debug.Log($"valor en 0,1 {power.Evaluate(0.1f)}");
+        //Debug.Log($"valor en 0.5 {power.Evaluate(0.5f)}");
+        //Debug.Log($"valor en 0.9 {power.Evaluate(0.9f)}");
+        //Debug.Log($"valor en 1 {power.Evaluate(1)}");
     }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1")) //(Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1") && !grandmotherProjectile.seMovio) //(Input.GetMouseButtonDown(0))
         {
+            //desactivar el click
+            grandmother.seMovio = true;
+
+            //desactivar el click.
+
+
             var forceAtClick = power.Evaluate(slider.value);// * POWER_MULTIPLIER;
 
-            Debug.Log($"hice click en el valor {forceAtClick}");
+            //Debug.Log($"hice click en el valor {forceAtClick}");
 
             grandmother.MovePlayer(forceAtClick);
 
