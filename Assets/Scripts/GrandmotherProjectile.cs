@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,28 +32,26 @@ public class GrandmotherProjectile : MonoBehaviour
     //
     [SerializeField] Animator anim;
 
-    [SerializeField] Ganar ganar;
     [SerializeField] SliderForce barra;
+
+    //musica y sonido
+    public AudioClip sonidoPatada;
+    public AudioClip sonidoRebote;
+    public AudioClip sonidoRuedas;
+    public AudioClip sonidoGanador;
+
+    public AudioSource audioSourcePrevio;
+    public AudioSource audioSourcePos;
+    public AudioSource audioSourceSonidos;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
-    {
-        //si se lanzo. y no llego a llego
-
-
-        //if (rb.velocity.normalized.x == 0f && (int)barra.estadoActual == 0)
-        //{
-        //    Debug.Log("tgas");
-        //}
-    }
-
     private void FixedUpdate()
     {
-        if(rb.velocity.normalized.x < 0f)
+        if (rb.velocity.normalized.x < 0f)
         {
             Vector3 newPosRueda = spriteRendererRueda.transform.localPosition;
             newPosRueda.x = Mathf.Abs(newPosRueda.x);
@@ -76,8 +75,11 @@ public class GrandmotherProjectile : MonoBehaviour
 
     }
 
-    public void MovePlayer( float forceAtClick)
+    public void MovePlayer(float forceAtClick)
     {
+
+        //audioSourcePrevio.Stop();
+
         //la fuerza sale desde una barra.
         //el angulo tmb   
         //sliceValueToForce = Mathf.Abs(Mathf.Cos(forceAtClick)) * forceMax;
@@ -93,9 +95,24 @@ public class GrandmotherProjectile : MonoBehaviour
         //
         seMovio = true;
 
+        //cambio de musica.
+        //paras uno, y activas la otra.
+
+        //audioSourcePos.Play();
+
         //animacion.
         anim.SetTrigger("Golpe");
-        
+
         Debug.Log($"la fuerza final tiene direccion {finalForce}");
+    }
+
+    public void PlayShoot(AudioClip sonido)
+    {
+        audioSourceSonidos.PlayOneShot(sonido);
+    }
+
+    public void SonidoPatada()
+    {
+        audioSourceSonidos.PlayOneShot(sonidoPatada);
     }
 }

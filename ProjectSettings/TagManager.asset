@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Asilo
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tierra
+    uniqueID: 511762139
+    locked: 0
+  - name: Casa
+    uniqueID: 3242227407
+    locked: 0
+  - name: Player
+    uniqueID: 3249297139
     locked: 0

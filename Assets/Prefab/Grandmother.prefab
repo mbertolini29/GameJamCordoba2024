@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1052739889
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b2632007f05245e4f88f3e58f7b3db4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -231,8 +231,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1052739889
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 880931fc67ee5324488d2b0da5fdd442, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -254,10 +254,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9013183657620849489}
-  - component: {fileID: 7054252059049613273}
   - component: {fileID: 1812726806272325567}
   - component: {fileID: 6852817412309131075}
   - component: {fileID: 308127667042549331}
+  - component: {fileID: 5380537767284107120}
   m_Layer: 10
   m_Name: Grandmother
   m_TagString: Player
@@ -281,60 +281,8 @@ Transform:
   - {fileID: 6627132201818701664}
   - {fileID: 2269050011891856665}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7054252059049613273
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6826264666998976429}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6132076, g: 0.5518868, b: 0.5518868, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!50 &1812726806272325567
 Rigidbody2D:
   serializedVersion: 4
@@ -384,8 +332,14 @@ MonoBehaviour:
   spriteRendererRueda: {fileID: 2722417205987347604}
   lavieja: {fileID: 2378736198216820214}
   anim: {fileID: 0}
-  ganar: {fileID: 0}
   barra: {fileID: 0}
+  sonidoPatada: {fileID: 8300000, guid: 14b59b5bde36b744aa41e22da0fcf5b4, type: 3}
+  sonidoRebote: {fileID: 8300000, guid: 7e18dfaef50cb8c40adc74545985cb11, type: 3}
+  sonidoRuedas: {fileID: 8300000, guid: 71aa1ff86fab3fc40bf465cedff53b68, type: 3}
+  sonidoGanador: {fileID: 8300000, guid: c672b85d7ba8e834883288452b141b58, type: 3}
+  audioSourcePrevio: {fileID: 0}
+  audioSourcePos: {fileID: 0}
+  audioSourceSonidos: {fileID: 0}
 --- !u!61 &308127667042549331
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -431,3 +385,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.88507, y: 2.332075}
   m_EdgeRadius: 0
+--- !u!114 &5380537767284107120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826264666998976429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae683a6b0572e0499a4f05799efa36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abuela: {fileID: 6852817412309131075}
+  rb: {fileID: 1812726806272325567}
+  enAsilo: 0
