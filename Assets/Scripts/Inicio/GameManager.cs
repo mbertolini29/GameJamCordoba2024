@@ -6,14 +6,12 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioClip clickSound;
+    public AudioSource audioSourceClickSound;
 
-    public AudioClip sonidoBoton;
-    public AudioSource audioSourceSonidos;
-
-    public void Sonido()
+    public void ClickSound()
     {
-        audioSourceSonidos.PlayOneShot(sonidoBoton);
-
+        audioSourceClickSound.PlayOneShot(clickSound);
     }
 
     public void PlayAgain()
